@@ -3,11 +3,11 @@ import React from 'react'
 import {VideoItem} from './index'
 
 const VideoList = (props) => {
-  const {videos} = props
+  const {videos,onVideoSelect} = props
   return (
 		<div className='ui relaxed divided list' >
-			{videos.map((video , index) => (
-				<VideoItem key={index} video={video} />
+			{videos.map((video ) => (
+				<VideoItem onVideoSelect={onVideoSelect} key={video.id.videoId} video={video} />
 			))}
 		</div>
 	);
