@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {SearchBar} from './components'
+import {SearchBar, VideoList} from './components'
 import youtube from './api/youtube'
 
 const App = () => {
@@ -11,12 +11,13 @@ const App = () => {
         q:term
       }
     } )
-    // console.log(response.data)
+    console.log(response.data.items)
     setVideos(response.data.items)
   }
   return (
     <div className='ui container' >
       <SearchBar onFormSubmit={onSearchTerm} />
+      <VideoList videos={videos} />
     </div>
   )
 }
