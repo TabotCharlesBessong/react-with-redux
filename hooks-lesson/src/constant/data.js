@@ -22,8 +22,24 @@ const items = [
   }
 ];
 
+const options = [
+	{
+		label: "The Color Red",
+		value: "red",
+	},
+	{
+		label: "The Color Green",
+		value: "green",
+	},
+	{
+		label: "A Shade of Blue",
+		value: "blue",
+	},
+];
+
 const data = {
-  items
+  items,
+	options
 }
 
 export default data

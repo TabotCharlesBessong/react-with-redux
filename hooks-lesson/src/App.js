@@ -1,14 +1,27 @@
-import React from "react";
-import {Accordion , Search} from "./components";
+import React, { useState } from "react";
+import { Accordion, Search, Dropdown } from "./components";
 import data from "./constant/data";
-// const url =
-// 	"https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=programming";
+
+
+
+
 
 const App = () => {
+  const [selected, setSelected] = useState(data.options[0]);
+  const [showDropdown, setShowDropdown] = useState(true);
+
   return (
     <div>
-      <Search/>
-      {/* <Accordion items={data.items} /> */}
+      <button onClick={() => setShowDropdown(!showDropdown)}>
+        Toggle Dropdown
+      </button>
+      {showDropdown ? (
+        <Dropdown
+          selected={selected}
+          onSelectedChange={setSelected}
+          options={data.options}
+        />
+      ) : null}
     </div>
   );
 };
