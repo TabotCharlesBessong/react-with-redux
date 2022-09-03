@@ -7,7 +7,8 @@ import data from "./constant/data";
 
 
 const App = () => {
-  const [selected, setSelected] = useState(data.options[0]);
+  const random = Math.floor(Math.random()* data.options.length)
+  const [selected, setSelected] = useState(data.options[random]);
   const [showDropdown, setShowDropdown] = useState(true);
 
   return (
