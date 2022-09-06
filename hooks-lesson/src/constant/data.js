@@ -37,9 +37,37 @@ const options = [
 	},
 ];
 
+const optionsL = [
+	{
+		label: "French",
+		value: "fr",
+	},
+	{
+		label: "Afrikaans",
+		value: "af",
+	},
+	{
+		label: "Arabic",
+		value: "ar",
+	},
+	{
+		label: "Hindi",
+		value: "hi",
+	},
+	{
+		label: "Dutch",
+		value: "nl",
+	},
+	{
+		label: "German",
+		value: "de",
+	},
+];
+
 const data = {
   items,
-	options
+	options,
+	optionsL
 }
 
 export default data
