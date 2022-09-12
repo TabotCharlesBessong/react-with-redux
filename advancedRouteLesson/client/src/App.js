@@ -1,9 +1,16 @@
 import React from 'react'
+import {BrowserRouter, Route, Switch } from 'react-router-dom'
+import {Header} from './components'
 
 const App = () => {
   return (
     <div>
-      <h1>Hello world</h1>
+      <BrowserRouter>
+        <h1>Hello world</h1>
+        <Switch>
+          <Route path='/' component={Header} />
+        </Switch>
+      </BrowserRouter>
     </div>
   )
 }
