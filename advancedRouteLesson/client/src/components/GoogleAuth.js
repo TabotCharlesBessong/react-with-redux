@@ -12,11 +12,16 @@ class GoogleAuth extends Component {
 			}).then(()=>{
         this.auth = window.gapi.auth2.getAuthInstance()
         this.setState({isSignedIn:this.auth.isSignedIn.get()})
+        this.auth.isSignedIn.listen(this.onAuthChange)
       })
     })
   }
 
-  renderAuthButon(){
+  onAuthChange = () => {
+    this.setState({isSignedIn:this.auth.isSignedIn.get()})
+  }
+
+  renderAuthButton = ()=>{
     if(this.state.isSignedIn === null) {
       return <div>I dont if they have signed in </div>
     }
