@@ -5,10 +5,10 @@ import { Header , StreamList , StreamCreate , StreamShow , StreamDelete , Stream
 const App = () => {
 	return (
 		<div>
-			<Header />
 			<BrowserRouter>
+				<Header />
 				<Switch>
-					<Route path="/"  component={StreamList} />
+					<Route path="/" component={StreamList} />
 					<Route path="/stream/new" component={StreamCreate} />
 					<Route path="/stream/edit" component={StreamEdit} />
 					<Route path="/stream/delete" component={StreamDelete} />
